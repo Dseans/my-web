@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anata no Gallery</title>
+    <link rel="prefetch" href="gallery.html">
+    <link rel="prefetch" href="css/styleG.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+    function playSound() {
+        const sound = document.getElementById("hover-sound");
+        sound.currentTime = 0; 
+        sound.play().catch(error => {
+            console.log("Audio waiting for user interaction.");
+        });
+    }
+    </script>
+    <style>
+        /* Define the cute animation */
+        @keyframes subtleBounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px); /* Gentle upward bounce */
+            }
+        }
+
+        /* Apply animation to the main content text */
+        main p {
+            display: inline-block; /* Essential for transform animation on <p> */
+            animation: subtleBounce 2s ease-in-out infinite; /* Continuous, gentle animation */
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="hover-sound" src="assets/music/hover.mp3" preload="auto"></audio>
+    <script>
+        document.getElementById("hover-sound").volume = 0.1; 
+    </script>
+
+    <header>
+        <p class="logo">Anata no Gyarari</p>
+        <nav>
+            <a href="index.html" onmouseover="playSound()">Home</a>
+            <a href="gallery.html" onmouseover="playSound()">Gallery</a>
+            <a href="about.html" onmouseover="playSound()">About</a>
+        </nav>
+    </header>
+
+    <main style="display: flex; justify-content: center; align-items: center; height: 75vh; color: white; font-size: 24px; text-shadow: 1px 1px 10px rgba(0,0,0,0.2);">
+        <p>This is a sample about page</p>
+    </main>
+
+</body>
+</html>
