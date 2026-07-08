@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anata no Gallery</title>
+    <link rel="prefetch" href="index.html">
+    <link rel="prefetch" href="css/style.css">
+    <link rel="stylesheet" href="css/styleG.css">
+    
+    <script>
+    function playSound() {
+        const sound = document.getElementById("hover-sound");
+        sound.currentTime = 0; 
+        sound.play().catch(error => {
+            console.log("Audio waiting for user interaction.");
+        });
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Audio Elements -->
+    <audio id="bg-music" src="assets/music/nca.mp3" autoplay loop></audio>
+    <audio id="hover-sound" src="assets/music/hover.mp3" preload="auto"></audio>
+
+    <script>
+        // Set volume levels
+        document.getElementById("hover-sound").volume = 0.1;
+        document.getElementById("bg-music").volume = 0.025;
+    </script>
+
+    <header>
+        <p class="logo">Anata no Gyarari</p>
+        <nav>
+            <a href="index.html" onmouseover="playSound()">Home</a>
+            <a href="gallery.html" onmouseover="playSound()">Gallery</a>
+            <a href="#about" onmouseover="playSound()">About</a>
+        </nav>
+    </header>
+
+    <main class="gallery-container">
+        <img src="assets/pictures/1.gif" class="gallery-item">
+        <img src="assets/pictures/2.gif" class="gallery-item">
+        <img src="assets/pictures/3.gif" class="gallery-item">
+        <img src="assets/pictures/4.gif" class="gallery-item">
+        <img src="assets/pictures/5.gif" class="gallery-item">
+        <img src="assets/pictures/6.jpg" class="gallery-item">
+        <img src="assets/pictures/7.jpg" class="gallery-item">
+        <img src="assets/pictures/8.jpg" class="gallery-item">
+        <img src="assets/pictures/9.jpg" class="gallery-item">
+
+</body>
+</html>
