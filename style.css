@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'FOT';
-  src: url('../assets/fonts/FOT.woff2') format('woff2'),
-       url('../assets/fonts/FOT.ttf') format('truetype');
+  src: url('FOT.woff2') format('woff2'),
+       url('FOT.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
